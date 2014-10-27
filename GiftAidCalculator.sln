@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftAidCalculator.TestConso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftAidCalculator.Domain", "GiftAidCalculator.Domain\GiftAidCalculator.Domain.csproj", "{230AB2B3-5151-40D6-BCDB-6DDB9AB8902A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftAidCalculator.Infrastructure", "GiftAidCalculator.Infrastructure\GiftAidCalculator.Infrastructure.csproj", "{BC46158B-4E02-46E8-AEB1-02C284435456}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,16 @@ Global
 		{230AB2B3-5151-40D6-BCDB-6DDB9AB8902A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{230AB2B3-5151-40D6-BCDB-6DDB9AB8902A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{230AB2B3-5151-40D6-BCDB-6DDB9AB8902A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC46158B-4E02-46E8-AEB1-02C284435456}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,21 @@
+using System;
+using GiftAidCalculator.Domain.Interfaces;
+
 namespace GiftAidCalculator.Domain
 {
     public class GiftAid
     {
-        public decimal TaxPercentage { get; private set; }
+        private readonly ITaxDataStore _taxDataStore;
 
-        public GiftAid(decimal taxPercentage)
+        public GiftAid(ITaxDataStore taxDataStore)
         {
-            TaxPercentage = taxPercentage;
+            _taxDataStore = taxDataStore;
         }
 
-        public decimal Calculate(decimal donationAmount)
+        public virtual decimal Calculate(decimal donationAmount)
         {
-            return donationAmount * TaxPercentage / (100 - TaxPercentage);
+            return donationAmount * _taxDataStore.Current / (100 - _taxDataStore.Current);
         }
+
     }
 }

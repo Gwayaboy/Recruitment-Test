@@ -56,13 +56,15 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\GiftAidCalculator.Domain\GiftAidCalculator.Domain.csproj">
       <Project>{230AB2B3-5151-40D6-BCDB-6DDB9AB8902A}</Project>
       <Name>GiftAidCalculator.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GiftAidCalculator.Infrastructure\GiftAidCalculator.Infrastructure.csproj">
+      <Project>{BC46158B-4E02-46E8-AEB1-02C284435456}</Project>
+      <Name>GiftAidCalculator.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
