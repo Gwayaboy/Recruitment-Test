@@ -1,4 +1,3 @@
-using System;
 using GiftAidCalculator.Domain.Interfaces;
 
 namespace GiftAidCalculator.Domain
@@ -14,8 +13,7 @@ namespace GiftAidCalculator.Domain
 
         public virtual decimal Calculate(decimal donationAmount)
         {
-            return donationAmount * _taxDataStore.Current / (100 - _taxDataStore.Current);
+            return donationAmount * _taxDataStore.Current/(100 - _taxDataStore.Current);
         }
-
     }
 }

@@ -38,7 +38,6 @@ namespace GiftAidCalculator.Tests.Domain
             Assert.That(giftAidAmount,Is.EqualTo(25));
         }
 
-
         [Test]
         public void WhenDonationAmountIs1024AndTaxRateIs20PercentThenGiftAidAmountShouldBe256()
         {

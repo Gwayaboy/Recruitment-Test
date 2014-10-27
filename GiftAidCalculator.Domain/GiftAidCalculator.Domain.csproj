@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DonorGiftAid.cs" />
     <Compile Include="GiftAid.cs" />
     <Compile Include="Interfaces\ITaxDataStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

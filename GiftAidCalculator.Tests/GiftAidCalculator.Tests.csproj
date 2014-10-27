@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\DonorAidGiftAidAmoundRoundedTo2DecimalsTests.cs" />
     <Compile Include="Domain\GiftAidAt20PercentTaxRateTests.cs" />
     <Compile Include="Domain\GiftAidWithConfigurableTaxRatesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
