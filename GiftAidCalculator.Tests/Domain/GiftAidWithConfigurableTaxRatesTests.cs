@@ -1,6 +1,4 @@
-﻿using System;
-using GiftAidCalculator.Domain;
-using GiftAidCalculator.Domain.Interfaces;
+﻿using GiftAidCalculator.Domain.Interfaces;
 using Moq;
 using NUnit.Framework;
 
@@ -11,12 +9,12 @@ namespace GiftAidCalculator.Tests.Domain
     {
 
         private readonly Mock<ITaxDataStore> _taxDataStore = new Mock<ITaxDataStore>();
-        private GiftAid _target;
+        private GiftAidCalculator.Domain.GiftAid _target;
 
         [SetUp]
         public void SetUp()
         {
-            _target = new GiftAid(_taxDataStore.Object);
+            _target = new GiftAidCalculator.Domain.GiftAid(_taxDataStore.Object);
         }
 
         private static readonly object[] DonationAmounts =

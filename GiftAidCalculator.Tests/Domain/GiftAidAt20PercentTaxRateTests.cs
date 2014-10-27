@@ -1,5 +1,4 @@
-﻿using GiftAidCalculator.Domain;
-using GiftAidCalculator.Domain.Interfaces;
+﻿using GiftAidCalculator.Domain.Interfaces;
 using Moq;
 using NUnit.Framework;
 
@@ -8,14 +7,14 @@ namespace GiftAidCalculator.Tests.Domain
     [TestFixture]
     public class GiftAidAt20PercentTaxRateTests
     {
-        private GiftAid _target;
+        private GiftAidCalculator.Domain.GiftAid _target;
         private readonly Mock<ITaxDataStore> _taxDataStore= new Mock<ITaxDataStore>();
 
         [SetUp]
         public void SetUp()
         {
             _taxDataStore.Setup(s => s.Current).Returns(20m);
-            _target = new GiftAid(_taxDataStore.Object);
+            _target = new GiftAidCalculator.Domain.GiftAid(_taxDataStore.Object);
         }
 
         [Test]
