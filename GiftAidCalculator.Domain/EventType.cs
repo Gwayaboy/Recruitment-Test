@@ -8,6 +8,11 @@ namespace GiftAidCalculator.Domain
         public readonly static EventType Swimming = new EventType(2,"swimming",3m);
         public readonly static EventType Others = new EventType(3,"others");
 
+        public EventType()
+        {
+            
+        }
+
         public EventType(int id,string name, decimal percentage  = 0m)
         {
             Id = id;
@@ -28,8 +33,13 @@ namespace GiftAidCalculator.Domain
             }
         }
 
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public decimal Percentage { get; set; }
+        public virtual int Id { get; private set; }
+        public virtual string Name { get; private set; }
+        public virtual decimal Percentage { get; set; }
+
+        public virtual decimal CalculateSupplement(decimal originalAmount)
+        {
+            return originalAmount * ((Percentage / 100) + 1);
+        }
     }
 }

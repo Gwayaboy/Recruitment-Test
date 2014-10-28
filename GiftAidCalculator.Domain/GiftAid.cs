@@ -17,15 +17,10 @@ namespace GiftAidCalculator.Domain
 
         public virtual decimal Calculate(decimal donationAmount)
         {
-            return AddEventTypeSupplement(donationAmount * _taxDataStore.Current / (100 - _taxDataStore.Current));
+            return EventType.CalculateSupplement(donationAmount * _taxDataStore.Current / (100 - _taxDataStore.Current));
         }
 
-        private decimal AddEventTypeSupplement(decimal originalAmount)
-        {
-            return originalAmount * ((EventType.Percentage /100) + 1);
-        }
-
-        public void UpdateEventType(EventType eventType)
+        public virtual void UpdateEventType(EventType eventType)
         {
             EventType = eventType;
         }

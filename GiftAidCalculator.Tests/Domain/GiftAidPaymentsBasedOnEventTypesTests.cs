@@ -10,6 +10,8 @@ namespace GiftAidCalculator.Tests.Domain
     {
         private readonly Mock<ITaxDataStore> _taxDataStore = new Mock<ITaxDataStore>();
         private GiftAid _target;
+        private static readonly decimal[] AddedPayments = {26.25m,25.3m,25m};
+
 
         [SetUp]
         public void SetUp()
@@ -18,30 +20,17 @@ namespace GiftAidCalculator.Tests.Domain
             _target = new GiftAid(_taxDataStore.Object);
         }
 
-        [Test]
-        public void ShouldIncreaseBy5PercentTheCalculatedGiftAidAmountWhenEventTypeIsRunning()
+        [TestCaseSource("AddedPayments")]
+        public void ShouldCalculatedGiftAidAmountBasedOnTheCurrentEventType(decimal addedPayments)
         {
-            _target.UpdateEventType(EventType.Running);
+            var fakeEventType = new Mock<EventType>();
+            _target.UpdateEventType(fakeEventType.Object);
+            fakeEventType.Setup(e => e.CalculateSupplement(25m)).Returns(addedPayments);
 
-            Assert.That(_target.Calculate(100m), Is.EqualTo(26.25m));
+            Assert.That(_target.Calculate(100m), Is.EqualTo(addedPayments));
         }
 
-        [Test]
-        public void ShouldIncreaseBy3PercentTheCalculatedGiftAidAmountWhenEventTypeIsRunning()
-        {
-            _target.UpdateEventType(EventType.Swimming);
-
-            Assert.That(_target.Calculate(100m), Is.EqualTo(25.75m));
-        }
-
-        [Test]
-        public void ShouldNotIncreaseTheCalculatedGiftAidAmountWhenEventTypeIsOthers()
-        {
-            _target.UpdateEventType(EventType.Others);
-
-            Assert.That(_target.Calculate(100m), Is.EqualTo(25m));
-        }
-
+       
 
     }
 }

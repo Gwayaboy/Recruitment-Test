@@ -17,7 +17,7 @@ namespace GiftAidCalculator.Tests.Domain
             _target = new GiftAidCalculator.Domain.GiftAid(_taxDataStore.Object);
         }
 
-        private static readonly object[] DonationAmounts =
+        private static readonly object[] TestData =
         {
             new[] {20m, 100m, 25m},
             new[] {5.5m, 100m, 5.8201058201058201058201058201m},
@@ -26,7 +26,7 @@ namespace GiftAidCalculator.Tests.Domain
         };
 
 
-        [TestCaseSource("DonationAmounts")]
+        [TestCaseSource("TestData")]
         public void ShouldCalculateGiftAidAmountBasedOnCurrentTaxRate(decimal currentTaxRate,
             decimal donationAmount, decimal expectedGiftAidAmount)
         {
