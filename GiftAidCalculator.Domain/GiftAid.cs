@@ -9,6 +9,7 @@ namespace GiftAidCalculator.Domain
 
         public GiftAid(ITaxDataStore taxDataStore)
         {
+            //some changes here
             _taxDataStore = taxDataStore;
             EventType = EventType.Others;
         }
